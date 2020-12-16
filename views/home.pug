@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 #{title}
+  ul.list-group
+    each blog, i in blogs
+      li.list-group-item
+        a(href="/blogs/"+blog._id)= blog.title
